@@ -165,11 +165,9 @@ function instruction9() {
   img.src = "photo.jpg";
   img.style.width = "150px";
   img.style.height = "150px";
-  article.appendChild(img);
 
   // Creating BR element
   var br = document.createElement("br");
-  article.appendChild(br);
 
   // Creating Buttons
   var leftB = document.createElement("button");
@@ -181,7 +179,6 @@ function instruction9() {
     },
     false
   );
-  article.appendChild(leftB);
 
   var rightB = document.createElement("button");
   rightB.innerHTML = "Rechts";
@@ -192,9 +189,14 @@ function instruction9() {
     },
     false
   );
-  article.appendChild(rightB);
 
-  updateContent("Opdracht 9 - Elementen toevoegen", description, "");
+  var result = "";
+
+  updateContent("Opdracht 9 - Elementen toevoegen", description, result);
+  document.getElementById("instructionResult").appendChild(img);
+  document.getElementById("instructionResult").appendChild(br);
+  document.getElementById("instructionResult").appendChild(leftB);
+  document.getElementById("instructionResult").appendChild(rightB);
 }
 
 function instruction10() {
